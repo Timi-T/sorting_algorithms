@@ -23,5 +23,16 @@ void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void bubble_sort(int *array, size_t size);
 void swap(int *array, int i);
+void insertion_sort_list(listint_t **list);
+void forward_swap_nodes(listint_t *list);
+void selection_sort(int *array, size_t size);
+void quick_sort(int *array, size_t size);
+void swap_elements(int *array, size_t i, size_t j);
+int partition(int *array, int start, int end, size_t size);
+void start_sort(int *array, int lb, int ub, size_t size);
+void shell_sort(int *array, size_t size);
+void cocktail_sort_list(listint_t **list);
+void start_merge(int *array, int lb, int ub, int centre);
+void merge_sort(int *array, size_t size);
 
 #endif
