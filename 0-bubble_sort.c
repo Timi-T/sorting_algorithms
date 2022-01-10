@@ -30,17 +30,22 @@ void bubble_sort(int *array, size_t size)
 			{
 				if (sorted == 1)
 					break;
-				else
-				{
-					size--;
-					i = 0;
-					sorted = 1;
-				}
+				size--;
+				i = 0;
+				sorted = 1;
 			}
 		}
 	}
 }
 
+/**
+ * swap - function to swap two consecutive elements of an array
+ *
+ * @array: array to be swapped from
+ * @i: element index to swap
+ *
+ * Return: nothing
+ */
 void swap(int *array, int i)
 {
 	int temp;
