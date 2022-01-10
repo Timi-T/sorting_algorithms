@@ -1,10 +1,9 @@
 #include "sort.h"
 
 /**
- * bubble_sort - function to sort an array using bubble sort algorithm
+ * insertion_sort_list - function to sort an array using bubble sort algorithm
  *
- * @array: array to be sorted
- * @size: size of array to be sorted
+ * @list: linked list
  *
  * Return: nothing
  */
@@ -15,23 +14,27 @@ void insertion_sort_list(listint_t **list)
 	listint_t *new_list = list_cp;
 	listint_t *back_trk;
 
-	while (new_list)
+	if (new_list && new_list->next)
 	{
-		if ((new_list->next) && ((new_list)->n > (new_list->next)->n))
+		while (new_list)
 		{
-			forward_swap_nodes(new_list);
-			print_list(*list);
-			back_trk = new_list->prev;
-			while ((back_trk->prev) && ((back_trk->prev)->n > (back_trk)->n))
+			if ((new_list->next) && ((new_list)->n > (new_list->next)->n))
 			{
-				forward_swap_nodes(back_trk->prev);
-				if (!(back_trk->prev))
-					*list = back_trk;
+				forward_swap_nodes(new_list);
 				print_list(*list);
+				back_trk = new_list->prev;
+				while ((back_trk->prev) && ((back_trk->prev)->n
+						> (back_trk)->n))
+				{
+					forward_swap_nodes(back_trk->prev);
+					if (!(back_trk->prev))
+						*list = back_trk;
+					print_list(*list);
+				}
 			}
+			else
+				new_list = new_list->next;
 		}
-		else
-			new_list = new_list->next;
 	}
 }
 
