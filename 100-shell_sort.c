@@ -19,7 +19,7 @@ void shell_sort(int *array, size_t size)
 		m = (n * 3) + 1;
 	}
 
-	while (n != 0)
+	while (n != 0 && size > 1)
 	{
 		n_const = n;
 		while (n_const <= (int)size - 1)
