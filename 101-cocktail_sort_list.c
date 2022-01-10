@@ -7,13 +7,12 @@
  *
  * Return: nothing
  */
-
 void cocktail_sort_list(listint_t **list)
 {
 	int sorted = 1;
 	listint_t *new_list = *list, *prev;
 
-	while (new_list->next != NULL)
+	while (new_list && new_list->next)
 	{
 		if ((new_list->next) && (new_list->n > (new_list->next)->n))
 		{
