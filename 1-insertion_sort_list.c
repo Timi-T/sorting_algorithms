@@ -21,6 +21,8 @@ void insertion_sort_list(listint_t **list)
 			if ((new_list->next) && ((new_list)->n > (new_list->next)->n))
 			{
 				forward_swap_nodes(new_list);
+				if (!(new_list->prev)->prev)
+					*list = new_list->prev;
 				print_list(*list);
 				back_trk = new_list->prev;
 				while ((back_trk->prev) && ((back_trk->prev)->n
