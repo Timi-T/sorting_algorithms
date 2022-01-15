@@ -10,12 +10,13 @@
  */
 void counting_sort(int *array, size_t size)
 {
-	int max = array[0], i = 0;
+	int max, i = 0;
 	int *element_count;
 	int *final_array;
 
-	if (size == 0 || array == NULL)
+	if (array == NULL || size == 0)
 		return;
+	max = array[0];
 	if (size > 1)
 	{
 		while (i < (int)size)
