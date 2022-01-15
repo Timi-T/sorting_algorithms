@@ -15,6 +15,8 @@ void selection_sort(int *array, size_t size)
 	int least, temp, swap = 0;
 	size_t i = 0, j = 0, current = 0;
 
+	if (array == NULL || size == 0)
+		return;
 	least = array_copy[j];
 	while (j != (size - 1) && size > 1)
 	{
