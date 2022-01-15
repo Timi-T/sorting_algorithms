@@ -14,6 +14,8 @@ void counting_sort(int *array, size_t size)
 	int *element_count;
 	int *final_array;
 
+	if (size == 0 || array == NULL)
+		return;
 	if (size > 1)
 	{
 		while (i < (int)size)
